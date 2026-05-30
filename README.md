@@ -76,13 +76,13 @@ Decision Tree achieved the best overall performance:
 
 ![DBSCAN Detection](results/dbscan.png)
 
-### Model Comparison
-
-![Model Comparison](results/model_comparison.png)
-
 ### Decision Tree
 
 ![Decision Tree](results/decision_tree.png)
+
+### Model Comparison
+
+![Model Comparison](results/model_comparison.png)
 
 ## Repository Structure
 
