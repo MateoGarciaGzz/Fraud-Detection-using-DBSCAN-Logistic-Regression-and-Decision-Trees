@@ -1,27 +1,53 @@
-# Fraud Detection in Banking Transactions
+# Bank Fraud Detection using Machine Learning
 
-## Description
+## Project Overview
 
-This project analyzes banking transactions to identify potential fraudulent activities using machine learning techniques.
+This project focuses on detecting potentially fraudulent banking transactions using a combination of unsupervised and supervised machine learning techniques.
 
-The workflow consists of:
+The workflow begins with anomaly detection through DBSCAN, which is used to identify unusual transaction patterns and generate fraud labels. These labels are then used to train and evaluate Logistic Regression and Decision Tree classifiers.
 
-1. Data preprocessing
-2. Fraud detection using DBSCAN
-3. Classification using Logistic Regression
-4. Classification using Decision Trees
-5. Model evaluation and comparison
+---
 
 ## Dataset
 
-The dataset contains 2,512 banking transactions with attributes related to transaction behavior and customer activity.
+The dataset contains 2,512 banking transactions and includes information related to transaction behavior, customer demographics, and account activity.
 
-Variables used:
+### Variables used in this project
 
 - TransactionAmount
 - TransactionDuration
 
-## Libraries
+---
+
+## Methodology
+
+### 1. Data Preprocessing
+
+- Selection of relevant variables
+- Missing value handling
+- Standardization using StandardScaler
+
+### 2. Fraud Detection
+
+- DBSCAN anomaly detection
+- Identification of potential fraudulent transactions
+
+### 3. Supervised Learning
+
+- Logistic Regression
+- Decision Tree
+
+### 4. Model Evaluation
+
+- Confusion Matrix
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+
+---
+
+## Technologies Used
 
 - Python
 - Pandas
@@ -29,14 +55,40 @@ Variables used:
 - Scikit-Learn
 - Matplotlib
 
+---
+
 ## Results
 
-The Decision Tree model achieved the best performance:
+Decision Tree achieved the best overall performance:
 
-- Accuracy: 0.996
-- Precision: 1.000
-- Recall: 0.769
-- F1-Score: 0.869
+| Metric | Logistic Regression | Decision Tree |
+|----------|----------|----------|
+| Accuracy | 0.992 | 0.996 |
+| Precision | 0.889 | 1.000 |
+| Recall | 0.615 | 0.769 |
+| F1-Score | 0.727 | 0.869 |
+
+---
+
+## Repository Structure
+
+```text
+bank-fraud-detection/
+│
+├── data/
+│   └── bank_transactions_data_2.csv
+│
+├── results/
+│   ├── dbscan.png
+│   ├── decision_tree.png
+│   └── model_comparison.png
+│
+├── fraud_detection.py
+├── README.md
+└── requirements.txt
+```
+
+---
 
 ## Author
 
